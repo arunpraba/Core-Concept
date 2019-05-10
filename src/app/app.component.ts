@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'core';
+
+  navList = [
+    { id: 1, path: 'auth-form', name: 'Ng Content' },
+    { id: 1, path: 'auth-form', name: 'Content Child ' }
+  ];
 }
