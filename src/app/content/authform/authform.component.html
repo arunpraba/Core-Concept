@@ -1,5 +1,4 @@
 <div class="container">
-<<<<<<< HEAD
   <div class="col">
     <form [formGroup]="myForm" (ngSubmit)='save()'>
       <div>
@@ -29,35 +28,3 @@
     </form>
   </div>
 </div>
-=======
-  <div class="col-100">
-    <ng-content select="mat-card-title"></ng-content>
-  </div>
-</div>
-<form [formGroup]="myForm" (ngSubmit)='save()'>
-  <div>
-    <mat-form-field appearance="outline">
-      <mat-label>Email</mat-label>
-      <input type="email" matInput formControlName="email">
-    </mat-form-field>
-  </div>
-
-  <div>
-    <mat-form-field appearance="outline">
-      <mat-label>Password</mat-label>
-      <input type="password" matInput formControlName="password">
-    </mat-form-field>
-  </div>
-
-  <div style="padding-bottom: 20px;">
-    <ng-content select="app-remember"></ng-content>
-  </div>
-  <div *ngIf="showMessgage" style="padding-bottom: 20px;">
-    You will be logged in for 30 Days
-  </div>
-  <div>
-    <ng-content select="button"></ng-content>
-  </div>
-
-</form>
->>>>>>> 87cec6498cb06f44f196dd41cb073f01037a87ca
