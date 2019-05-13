@@ -4,9 +4,11 @@ import {
   Output,
   EventEmitter,
   ViewChild,
+  ElementRef,
   ContentChild,
   AfterViewInit,
-  AfterContentInit
+  AfterContentInit,
+  Renderer2
 } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { RememberComponent } from '../remember/remember.component';
@@ -25,7 +27,8 @@ export class AuthformComponent
   @Output() submitted: EventEmitter<any> = new EventEmitter();
   @ContentChild(RememberComponent) remember: RememberComponent;
   @ViewChild(AuthMessageComponent) message: AuthMessageComponent;
-  constructor(private fb: FormBuilder) {}
+  @ViewChild('email') email: ElementRef;
+  constructor(private fb: FormBuilder, private renderer: Renderer2) {}
 
   ngOnInit() {
     this.myForm = this.fb.group({
@@ -45,7 +48,22 @@ export class AuthformComponent
     }
   }
 
-  ngAfterViewInit() {}
+  ngAfterViewInit() {
+    /* View Children Changing Native Dom
+    this.email.nativeElement.focus();
+    this.email.nativeElement.setAttribute('placeholder',
+      'Enter Your Email'); */
+    /* Using renderer to change the dom
+    First Parameter Element
+    Second Parameter Attribute
+    Third Parameter value
+    this.renderer.setAttribute(
+      this.email.nativeElement,
+      'placeholder',
+      'Enter Your Email'
+    );
+    */
+  }
 
   save() {
     this.submitted.emit(this.myForm.value);
