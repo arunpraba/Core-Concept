@@ -1,1 +1,85 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+mat-sidenav {
+  box-shadow: 3px 0 6px rgba(0, 0, 0, 0.24);
+  width: 200px;
+}
+
+mat-sidenav-content {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.mat-sidenav-container {
+  background: #f5f5f5;
+  flex: 1;
+}
+.app-container {
+  padding: 30px;
+  margin: 30px;
+}
+
+.mat-drawer-container {
+  position: relative;
+  height: 92vh !important;
+  z-index: 1;
+  box-sizing: border-box;
+  display: block;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  margin: 5px;
+  flex-wrap: wrap;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container [class*="col"] {
+  padding: 5px;
+  flex: 1;
+}
+
+.mat-raised-button {
+  width: 80%;
+  height: 40px;
+}
+
+mat-card {
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+  mat-card-header {
+    margin-bottom: 10px;
+  }
+  mat-form-field {
+    width: 95%;
+  }
+}
+::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border: 1px solid #555555;
+}
