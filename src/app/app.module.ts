@@ -13,13 +13,17 @@ import { ContentComponent } from './content/content.component';
 import { AuthformComponent } from './content/authform/authform.component';
 import { RememberComponent } from './content/remember/remember.component';
 import { AuthMessageComponent } from './content/auth-message/auth-message.component';
+import { DynamicComponentComponent } from './dynamic-component/dynamic-component.component';
+import { InputComponent } from './dynamic-component/input/input.component';
 @NgModule({
   declarations: [
     AppComponent,
     ContentComponent,
     AuthformComponent,
     RememberComponent,
-    AuthMessageComponent
+    AuthMessageComponent,
+    DynamicComponentComponent,
+    InputComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +34,7 @@ import { AuthMessageComponent } from './content/auth-message/auth-message.compon
     ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [InputComponent]
 })
 export class AppModule {}
