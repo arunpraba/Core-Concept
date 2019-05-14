@@ -15,6 +15,8 @@ import { RememberComponent } from './content/remember/remember.component';
 import { AuthMessageComponent } from './content/auth-message/auth-message.component';
 import { DynamicComponentComponent } from './dynamic-component/dynamic-component.component';
 import { InputComponent } from './dynamic-component/input/input.component';
+import { ViewencapsulationComponent } from './viewencapsulation/viewencapsulation.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +25,8 @@ import { InputComponent } from './dynamic-component/input/input.component';
     RememberComponent,
     AuthMessageComponent,
     DynamicComponentComponent,
-    InputComponent
+    InputComponent,
+    ViewencapsulationComponent
   ],
   imports: [
     BrowserModule,

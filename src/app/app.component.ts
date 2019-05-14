@@ -10,6 +10,7 @@ export class AppComponent {
 
   navList = [
     { id: 1, path: 'auth-form', name: 'Login Form' },
-    { id: 2, path: 'dynamic', name: 'Dynamic Component' }
+    { id: 2, path: 'dynamic-component', name: 'Dynamic Component' },
+    { id: 3, path: 'view-encapsulation', name: 'View Encapsulation' }
   ];
 }

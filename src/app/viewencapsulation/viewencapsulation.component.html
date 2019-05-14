@@ -1,0 +1,14 @@
+<mat-card class="mat-elevation-z8">
+  <nav mat-tab-nav-bar backgroundColor="accent" color="warn">
+    <a mat-tab-link *ngFor="let link of links" [routerLink]="link.path" routerLinkActive #rla="routerLinkActive"
+      [active]="rla.isActive">
+      {{link.name}}
+    </a>
+  </nav>
+  <div class="child-container">
+    <router-outlet></router-outlet>
+  </div>
+  <mat-card-content>
+    <mat-hint>Click on Tabs to view Data</mat-hint>
+  </mat-card-content>
+</mat-card>
