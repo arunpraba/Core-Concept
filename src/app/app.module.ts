@@ -16,6 +16,10 @@ import { AuthMessageComponent } from './content/auth-message/auth-message.compon
 import { DynamicComponentComponent } from './dynamic-component/dynamic-component.component';
 import { InputComponent } from './dynamic-component/input/input.component';
 import { ViewencapsulationComponent } from './viewencapsulation/viewencapsulation.component';
+import { ChangeDetectionComponent } from './change-detection/change-detection.component';
+import { OnPushComponent } from './change-detection/on-push/on-push.component';
+import { DefaultComponent } from './change-detection/default/default.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -26,13 +30,17 @@ import { ViewencapsulationComponent } from './viewencapsulation/viewencapsulatio
     AuthMessageComponent,
     DynamicComponentComponent,
     InputComponent,
-    ViewencapsulationComponent
+    ViewencapsulationComponent,
+    ChangeDetectionComponent,
+    DefaultComponent,
+    OnPushComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     MaterialModule,
+    SharedModule,
     FormsModule,
     ReactiveFormsModule
   ],

@@ -1,0 +1,43 @@
+<mat-card class="mat-elevation-z8">
+  <div class="container">
+    <mat-card-title>
+      Custom Directives Checking
+    </mat-card-title>
+  </div>
+  <mat-card-content>
+    <div class="container">
+      <div class="col-50">
+        <mat-hint>Credit Card Directive (Ex: 1234 4567 8901 2345)</mat-hint>
+        <mat-form-field appearance="outline">
+          <mat-label>Credit Card Directive</mat-label>
+          <input matInput CreditCard>
+        </mat-form-field>
+      </div>
+      <div class="col-50">
+        <mat-hint>This directive accepts number only. length can be controlled by min & max length</mat-hint>
+        <mat-form-field appearance="outline">
+          <mat-label>Number only</mat-label>
+          <input matInput NumberOnly>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="container">
+      <div class="col-50">
+        <mat-hint>Number only Directive but min & length max is 10</mat-hint>
+        <mat-form-field appearance="outline">
+          <mat-label>Phone Number</mat-label>
+          <mat-icon matSuffix>phone</mat-icon>
+          <input matInput NumberOnly minlength="10" maxlength="10">
+        </mat-form-field>
+      </div>
+      <div class="col-50">
+        <mat-hint>Accepts Text only</mat-hint>
+        <mat-form-field appearance="outline">
+          <mat-label>Name</mat-label>
+          <input matInput TextOnly minlength="10" maxlength="10">
+        </mat-form-field>
+      </div>
+    </div>
+
+  </mat-card-content>
+</mat-card>

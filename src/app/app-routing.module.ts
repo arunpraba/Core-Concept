@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ContentComponent } from './content/content.component';
 import { DynamicComponentComponent } from './dynamic-component/dynamic-component.component';
 import { ViewencapsulationComponent } from './viewencapsulation/viewencapsulation.component';
+import { ChangeDetectionComponent } from './change-detection/change-detection.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'auth-form', pathMatch: 'full' },
@@ -26,6 +27,12 @@ const routes: Routes = [
         loadChildren: './viewencapsulation/three/three.module#ThreeModule'
       }
     ]
+  },
+  { path: 'change-detection', component: ChangeDetectionComponent },
+  {
+    path: 'check-directives',
+    loadChildren:
+      './check-directives/check-directives.module#CheckDirectivesModule'
   },
   { path: '**', redirectTo: 'auth-form', pathMatch: 'full' }
 ];

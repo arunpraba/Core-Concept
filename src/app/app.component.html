@@ -16,7 +16,14 @@
 <mat-sidenav-container>
   <mat-sidenav #sidenav mode="side" opened class="app-sidenav">
     <mat-nav-list>
-      <a mat-list-item *ngFor="let nav of navList" routerLink="{{nav.path}}">{{nav.name}}</a>
+      <a mat-list-item *ngFor="let nav of navList" routerLink="{{nav.path}}">
+        <mat-icon>
+          {{nav.icon}}
+        </mat-icon>
+        <span style="padding-left: 4px;">
+          {{nav.name}}
+        </span>
+      </a>
     </mat-nav-list>
   </mat-sidenav>
 

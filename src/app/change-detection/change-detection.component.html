@@ -1,0 +1,20 @@
+<mat-card class="mat-elevation-z8">
+  <div class="container">
+    <div class="col-33">
+      <button mat-raised-button color="primary" (click)=addProp()>Add Property</button>
+      <button mat-raised-button color="warn" (click)=changeUser()>Change User</button>
+      <button mat-raised-button color="accent" (click)=changeName()>Change Name</button>
+    </div>
+    <div class="col-33"></div>
+    <div class="col-33"></div>
+  </div>
+  <div class="container">
+    <div class="col">
+      <default [user]="user"></default>
+    </div>
+    <div class="col">
+      <on-push [user]="user"></on-push>
+    </div>
+  </div>
+
+</mat-card>
