@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="col-50">
+    <mat-card class="mat-elevation-z8">
+      <mat-card-title>Custom Pipes</mat-card-title>
+
+      <mat-hint>Transforms File Size in to 'GB'</mat-hint>
+      <div class="container">
+        <div class="col-25">
+          <mat-list>
+            <mat-list-item *ngFor="let file of folders">
+              <span>{{file.name}}</span> : <span>{{file.size | filesize}}</span> : Description :
+              <span>{{file.description}}</span>
+            </mat-list-item>
+          </mat-list>
+        </div>
+      </div>
+
+      <mat-hint>You can override the Property 'GB' to 'KB'</mat-hint>
+      <div class="container">
+        <div class="col-25">
+          <mat-list>
+            <mat-list-item *ngFor="let file of folders">
+              <span>{{file.name}}</span> : <span>{{file.size | filesize: 'KB'}}</span> : Description :
+              <span>{{file.description}}</span>
+            </mat-list-item>
+          </mat-list>
+        </div>
+      </div>
+
+    </mat-card>
+  </div>
+  <div class="col-50">
+    <mat-card class="mat-elevation-z8">
+      <mat-card-title>Using Pipes with Providers</mat-card-title>
+      <mat-hint>Data will be transfered before hitting html</mat-hint>
+      <div class="container">
+        <div class="col-25">
+          <mat-list>
+            <mat-list-item *ngFor="let file of mapped">
+              <span>{{file.name}}</span> : <span>{{file.size}}</span> : Description :
+              <span>{{file.description}}</span>
+            </mat-list-item>
+          </mat-list>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>

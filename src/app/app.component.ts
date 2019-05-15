@@ -33,6 +33,12 @@ export class AppComponent {
       icon: 'settings_ethernet',
       path: 'check-directives',
       name: 'Directives'
+    },
+    {
+      id: 6,
+      icon: 'call_split',
+      path: 'check-pipes',
+      name: 'Pipes'
     }
   ];
 }

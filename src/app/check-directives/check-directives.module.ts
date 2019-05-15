@@ -6,9 +6,10 @@ import { CheckDirectivesComponent } from './check-directives.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../material.module';
 import { SharedModule } from '../shared/shared.module';
+import { StructuralDirectivesComponent } from './structural-directives/structural-directives.component';
 
 @NgModule({
-  declarations: [CheckDirectivesComponent],
+  declarations: [CheckDirectivesComponent, StructuralDirectivesComponent],
   imports: [
     CommonModule,
     FormsModule,

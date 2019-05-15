@@ -7,7 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheckDirectivesComponent implements OnInit {
   inputValue: any;
+  users: any[] = [];
+
   constructor() {}
 
   ngOnInit() {}
+  handleEventEmitting() {
+    this.users = [
+      { id: 1, name: 'Iron Man' },
+      { id: 2, name: 'Spider Man' },
+      { id: 3, name: 'Captain America' },
+      { id: 4, name: 'Doctor Strange' },
+      { id: 5, name: 'Hulk' }
+    ];
+  }
 }

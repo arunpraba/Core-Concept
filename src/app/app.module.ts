@@ -20,6 +20,7 @@ import { ChangeDetectionComponent } from './change-detection/change-detection.co
 import { OnPushComponent } from './change-detection/on-push/on-push.component';
 import { DefaultComponent } from './change-detection/default/default.component';
 import { SharedModule } from './shared/shared.module';
+import { CheckPipesComponent } from './check-pipes/check-pipes.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { SharedModule } from './shared/shared.module';
     ViewencapsulationComponent,
     ChangeDetectionComponent,
     DefaultComponent,
-    OnPushComponent
+    OnPushComponent,
+    CheckPipesComponent
   ],
   imports: [
     BrowserModule,

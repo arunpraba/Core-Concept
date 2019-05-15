@@ -1,17 +1,19 @@
-<div class="container">
-  <mat-card class="mat-elevation-z8">
-    <mat-tab-group>
-      <mat-tab label="Login">
-        <app-authform (submitted)="loginUser($event)">
-          <app-remember (checked)="rememberMe($event)"></app-remember>
-          <button mat-raised-button color="primary" type="submit">Login</button>
-        </app-authform>
-      </mat-tab>
-      <mat-tab label="Create Account">
-        <app-authform (submitted)="createUser($event)">
-          <button mat-raised-button color="primary" type="submit">Join Us</button>
-        </app-authform>
-      </mat-tab>
-    </mat-tab-group>
-  </mat-card>
+<div class="login-wrapper">
+  <div class="container">
+    <mat-card class="mat-elevation-z8">
+      <mat-tab-group>
+        <mat-tab label="Login">
+          <app-authform (submitted)="loginUser($event)">
+            <app-remember (checked)="rememberMe($event)"></app-remember>
+            <button mat-raised-button color="primary" type="submit">Login</button>
+          </app-authform>
+        </mat-tab>
+        <mat-tab label="Create Account">
+          <app-authform (submitted)="createUser($event)">
+            <button mat-raised-button color="primary" type="submit">Join Us</button>
+          </app-authform>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-card>
+  </div>
 </div>
