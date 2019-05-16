@@ -4,7 +4,7 @@ import { Directive, HostListener, HostBinding } from '@angular/core';
   selector: '[CreditCard]'
 })
 export class CreditCardDirective {
-  constructor() {}
+  constructor() { }
   @HostListener('input', ['$event'])
   onKeyDown(event: KeyboardEvent) {
     const input = event.target as HTMLInputElement;
@@ -23,7 +23,7 @@ export class CreditCardDirective {
 
     const numbers = [];
     for (let i = 0; i < trimmed.length; i += 4) {
-      numbers.push(trimmed.substr(i, 4)); // ['1234, '1234',]
+      numbers.push(trimmed.substr(i, 4)); // ['1234', '1234',]
     }
 
     input.value = numbers.join(' ');

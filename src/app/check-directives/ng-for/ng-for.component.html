@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="col-25">
+    <h3>Ng For Structural Directive</h3>
+    <div *ngFor="let item of data">
+      <div class="container">
+        <div class="col-33">
+          <mat-card class="mat-card-elevation-z8" style="margin-top:20px">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>{{item.title}}</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image [src]="item.img" alt="Photo of a Shiba Inu">
+            <mat-card-content>
+              <p>
+                {{item.content}}
+              </p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+

@@ -7,9 +7,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../material.module';
 import { SharedModule } from '../shared/shared.module';
 import { StructuralDirectivesComponent } from './structural-directives/structural-directives.component';
+import { NgForComponent } from './ng-for/ng-for.component';
 
 @NgModule({
-  declarations: [CheckDirectivesComponent, StructuralDirectivesComponent],
+  declarations: [CheckDirectivesComponent, StructuralDirectivesComponent, NgForComponent],
   imports: [
     CommonModule,
     FormsModule,
