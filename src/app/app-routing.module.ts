@@ -36,6 +36,11 @@ const routes: Routes = [
       './check-directives/check-directives.module#CheckDirectivesModule'
   },
   { path: 'check-pipes', component: CheckPipesComponent },
+  {
+    path: 'reactive-forms',
+    loadChildren:
+      './reactive-forms/reactive-forms.module#ReactiveFormsArrayModule'
+  },
   { path: '**', redirectTo: 'auth-form', pathMatch: 'full' }
 ];
 

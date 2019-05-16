@@ -1,0 +1,90 @@
+<mat-card class="mat-elevation-z8">
+  <div class="container">
+    <div class="col-50">
+      <mat-card-header>
+        <mat-card-title>
+          Reactive Form
+        </mat-card-title>
+      </mat-card-header>
+      <form [formGroup]="myform" (ngSubmit)="saveSubmit()">
+
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>First Name</mat-label>
+            <input matInput formControlName="firstName">
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Last Name</mat-label>
+            <input matInput formControlName="lastName">
+          </mat-form-field>
+        </div>
+        <div formGroupName="address">
+          <div>
+            <mat-form-field appearance="outline">
+              <mat-label>Address</mat-label>
+              <input matInput formControlName="address">
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field appearance="outline">
+              <mat-label>Pincode</mat-label>
+              <input matInput formControlName="pincode">
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div formArrayName="branch" *ngFor="let bArray of branchArray.controls; let bIndex = index">
+          <div>
+            <mat-hint>Add More Branches</mat-hint>
+            <button mat-icon-button type="button" color="primary" (click)="addBranch()">
+              <mat-icon>add_circle</mat-icon>
+            </button>
+            <button mat-icon-button type="button" color="warn" (click)="removeBranch(bIndex)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+          <div [formGroupName]="bIndex">
+            <mat-list role="list">
+              <mat-list-item role="listitem">Branch {{bIndex+1}}</mat-list-item>
+            </mat-list>
+            <mat-form-field appearance="outline" style="padding-right:10px">
+              <mat-label>Branch Name</mat-label>
+              <input matInput formControlName="branch">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Branch Code</mat-label>
+              <input matInput formControlName="branchCode">
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div>
+          <button mat-raised-button color="primary" type="submit">Save</button>
+          <button mat-raised-button color="accent" type="button" (click)="updateValue()">Update</button>
+        </div>
+      </form>
+    </div>
+    <div class="col-50">
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title>
+            Form Control : For single value
+          </mat-card-title>
+          <mat-card-title>
+            Form Group : For object value
+          </mat-card-title>
+          <mat-card-title>
+            Form Array : For array value
+          </mat-card-title>
+        </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content>
+        <h3>
+          <pre>{{myform.value | json}}</pre>
+        </h3>
+      </mat-card-content>
+    </div>
+  </div>
+</mat-card>

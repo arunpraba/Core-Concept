@@ -39,6 +39,12 @@ export class AppComponent {
       icon: 'call_split',
       path: 'check-pipes',
       name: 'Pipes'
+    },
+    {
+      id: 7,
+      icon: 'chrome_reader_mode',
+      path: 'reactive-forms',
+      name: 'Reactive Forms'
     }
   ];
 }
