@@ -1,4 +1,4 @@
-# Angular core concepst
+# Angular core concepts with Angular Material
 
 ## Router => Lazy Loading and Child Router Implemented
 
